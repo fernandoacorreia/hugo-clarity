@@ -20,6 +20,7 @@
     {{ .TableOfContents }}
     {{ end }}
     {{- .Content }}
+    <hr>
     {{- template "_internal/disqus.html" . }}
   </article>
   {{- partial "sidebar" . }}
