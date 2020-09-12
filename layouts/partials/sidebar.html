@@ -3,7 +3,7 @@
   <section class="sidebar_inner">
     <h2>{{ .Site.Params.Author }}</h2>
     <div>
-      {{ .Site.Params.IntroDescription }}
+      {{ .Site.Params.IntroDescription | safeHTML }}
     </div>
     <a href = '{{ absURL "about/" }}' class="button mt-1" role="button">Read More</a>
     <h2 class="mt-4">Featured Posts</h2>
