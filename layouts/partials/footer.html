@@ -8,8 +8,7 @@
 <footer class="footer">
   <div class="footer_inner wrap pale">
     <img src='{{ absURL (default $defaultFooterLogo $s.footerLogo) }}' class="icon icon_2 transparent" alt="{{ $c }}">
-    <p>{{ T "copyright" | markdownify }}{{ with $s.since }}&nbsp;{{ . }}-{{ end }}&nbsp;<span class="year"></span>&nbsp;{{ upper $c }}. {{ T "all_rights" | markdownify }}</p>
-    {{- with $s.license }}<p>{{ . | safeHTML }}</p>{{- end }}
+    <p>{{ T "copyright" | markdownify }}&nbsp;©&nbsp;<span class="year"></span>&nbsp;{{ $c }}.{{ with $s.license }} {{ . | safeHTML }}{{ end }}</p>
     {{- partialCached "top" .}}
   </div>
 </footer>
